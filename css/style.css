@@ -1,0 +1,391 @@
+/****************  폰트 *********************/
+@font-face {
+    font-family:'edosz';
+    src: url(edosz.ttf) format('opentype')
+}
+
+@font-face {
+    font-family:'jalnanoft';
+    src: url(JalnanOTF.otf) format('opentype')
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
+.nanumpenscript * {
+font-family: 'Nanum Pen Script', cursive;
+}
+
+
+
+/*************************공통 & 전체*********************/
+*{padding: 0; margin: 0; font-family:'SpoqaHanSansNeo-Regular'}
+.inner{width: 1200px; margin: 0 auto;}
+ul{list-style: none;}
+a{text-decoration: none; color: inherit;}
+button{border: none;}
+h1{font-family:'jalnanoft'}
+h3{font-size: 2em; font-family: 'Nanum Pen Script', cursive;}
+
+
+
+/**************************헤더*****************************/
+
+header{width: 100%; height: 100px; text-align: center; position:relative; z-index: 2;}
+
+/*헤더 좌우*/
+header .inner::after, header .inner::before{display: block; content:''; clear: both;}
+header .logo{float: left; width: 25%; height: 100px; padding-top: 15px; box-sizing: border-box; background-color: #010042;}
+header nav{float: left; width: 75%; height: 100px; padding-top: 50px; box-sizing: border-box;}
+
+/*navi_mainmenu*/
+.mainmenu::after .mainmenu::before{clear: both; content: ''; display: block;}
+header nav .mainmenu > li{width: 20%; height: 50px; float: left; color: #fff; 
+    transition: all 0.4s; font-weight: bolder; padding: 10px 0px; 
+    box-sizing: border-box;  color:#010042;}
+header nav .mainmenu > li > a:hover{border-bottom: 3px solid #010042;}
+
+/*navi_submenu*/
+header nav .submenu{display: none; position: relative; top: 20px;
+    z-index: 3; width: 90%;
+    border-radius: 5px; 
+    background-color: #fff;
+    margin-left: 10px; overflow: hidden;
+    box-shadow: 1px 1px 2px #e0e7e7,
+        -1px -1px 2px #ffffff;
+
+}
+header nav .submenu li{color: #000; transition: all 0.4s; padding: 10px 0;}
+header nav .submenu li:hover {background-color: #010042; color:#fff;}
+
+
+
+/******************************컨텐츠1*************************/
+.con1{
+    width: 100%; height: 800px;
+    background-image: url(../images/surfergray.jpg);
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+/*내용*/
+
+.con1::before, .con1::after{display: block; content: ''; clear: both;}
+.box1{width: 33%; float: left; text-align: right;}
+.box2{width: 33%; float: right; text-align: left;}
+
+.con1 .box1 h2 a{
+    position: absolute;
+    left: 30px; top: 130px;
+    color: #010042;
+}
+.con1 .box2 h2 a{position: absolute; 
+    right: 50px; top: 130px;
+    color: #010042;
+}
+
+
+.select h2 a:hover{color: rgb(219, 82, 28);}
+
+.con1 h1{font-size: 4em; margin: 100px; font-family:'edosz';}
+.box1 p{padding-right: 100px;}
+.box2 p{padding-left: 100px;}
+
+
+
+
+/* 갈매기배경 */
+.seagull_1{position: absolute; top: 200px; left: 700px;animation: moveup 2s infinite; }
+.seagull_2{position: absolute; top: 200px; animation: moveup 3s infinite; }
+
+@keyframes moveup{
+    0%{margin-top: 0px;}
+    50%{margin-top: 5px;}
+    100%{margin-top: 0px;}
+}
+/*갈매기배경end */
+
+
+/******************************컨텐츠2***********#010042*******/
+.sec2{height: 800px; width: 100%; position: relative; background-color: #cfecf2; z-index: 99;}
+
+/*******배경 시작************/
+
+/* 파도_상 */
+.wave > .w1{position: absolute; top: -150px; background-size: cover; 
+    animation: moveleft 10s infinite; z-index: 98;}
+
+@keyframes moveleft{
+    0%{margin-left: -50px;}
+    50%{margin-left: 0px;}
+    100%{margin-left: -50px;}
+}
+
+/* 파도_하 */
+.wave > .w2{
+    position: absolute; bottom: -150px; background-size: cover; 
+    animation: movedown 3s infinite; z-index: 98;}
+
+@keyframes movedown{
+    0%{margin-bottom: 0px;}
+    50%{margin-bottom: 10px;}
+    100%{margin-bottom: 0px;}
+}
+    
+/* 사람_하 */
+.tube1{position: absolute; bottom: 10px; left: 40%; z-index: 99; 
+        animation: rotate 3s ease-in-out infinite;}
+.tube2{position: absolute; bottom: 10px; left: 60%; z-index: 99; 
+        animation: rotate 3s ease-in-out infinite;}
+
+
+@keyframes rotate{
+    0%{transform: rotate(5deg);}
+    50%{transform: rotate(-5deg);}
+    100%{transform: rotate(5deg);}
+}
+/*******배경끝************/
+/*******내용시작**********/
+
+.con2{width: 100%; height: 800px; margin-top: 100px; text-align: center; }
+.event{text-align: center;} 
+.con2 h1{font-size: 2em; margin: 25px;}
+.poster h3{margin-top: 30px; padding-bottom: 15px; box-sizing: border-box;}
+
+.poster::before, .poster::after{clear: both; content: ''; display: block;}
+.poster{width: 100%; height: 600px; padding: 20px; box-sizing: border-box; text-align: center;}
+.post1{float: left; width: 32%; height: 500px; background-color: #fff; 
+}
+.post2{float: left; width: 32%; height: 500px; background-color: #fff; margin: 0 2%;
+}
+.post3{float: left; width: 32%; height: 500px; background-color:#fff;
+}
+
+
+button{width: 150px;  height: 40px; border-radius: 50px; margin-top: 20px; font-size: 1.2em; color:#fff; background-color: #010042;}
+
+.post1:hover{background-color: #010042; color: #fff;}
+.post2:hover{background-color: #010042; color: #fff;}
+.post3:hover{background-color: #010042; color: #fff;}
+
+.post1:hover > button{background-color: #fff; color: #010042;}
+.post2:hover > button{background-color: #fff; color: #010042;}
+.post3:hover > button{background-color: #fff; color: #010042;}
+
+.post1 button:hover{transform:scale(1.2)}
+.post2 button:hover{transform:scale(1.2)}
+.post3 button:hover{transform:scale(1.2)}
+
+/*******내용end**********/
+/******************************컨텐츠2 끝***********#010042*******/
+
+/******************************컨텐츠3 시작***********************/
+
+
+.sec3{
+background: linear-gradient(transparent, rgba(71, 205, 241, 0.4) 30%, transparent);
+}
+.con3{
+    width: 100%; height: 1000px; margin-top: 200px; text-align: center; 
+}
+.con3 h3{text-align: center; padding-bottom: 20px;}
+.con3 h1{text-align: center; font-size: 2em; padding-bottom: 50px;}
+
+
+.maploc::before, .maploc::after{display: block; content: ''; clear: both;}
+.map{
+    width: 60%; height: 700px; float:left; position: relative;
+    background-image: url(../images/busanmap2.png); background-repeat: no-repeat;
+}
+
+
+
+.map img:nth-child(2){width: 200px; position:absolute; left: 550px; top: 500px;}
+
+.map img:nth-child(1){width: 50PX; position: absolute; left: 75%; top: 18%;}
+.map img:nth-child(2){width: 50px; position: absolute; left: 70%; top: 28%;}
+.map img:nth-child(3){width: 50px; position: absolute; left: 60%; top: 32%;}
+.map img:nth-child(4){width: 50px; position: absolute; left: 55%; top: 35%;}
+.map img:nth-child(5){width: 50px; position: absolute; left: 15%; top: 62%;}
+
+.map img:nth-child(1):hover{width: 60px;}
+.map img:nth-child(2):hover{width: 60px;}
+.map img:nth-child(3):hover{width: 60px;}
+.map img:nth-child(4):hover{width: 60px;}
+.map img:nth-child(5):hover{width: 60px;} 
+
+
+    .loc_info{
+        width: 40%; height: 700px; float:left; padding-top: 300px; 
+        box-sizing: border-box;
+
+
+    }
+    .busan_info{
+        width: 450px; height: 450px; 
+        /* background-color: #cfecf2;  */
+        border-radius:10px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 20px 20px 40px #e0e7e7,
+        -20px -20px 40px #ffffff;
+    }
+
+.busan_info_default img:nth-child(1){position: absolute; right: 20px; top: 20px;}
+.busan_info_default img:nth-child(2){position: absolute;  left: 0; bottom: 40px; width: 450px;}
+.busan_info_default img:nth-child(3){position: absolute;  left: 0; bottom: -100px; width: 450px; z-index: 2;}
+.busan_info_default img:nth-child(4){position: absolute;  left: 0; bottom: -100px; width: 450px; z-index: 3;}
+.busan_info_default h3{position: absolute;  left: 50px; top: 50px;}
+.busan_info_default p{position: absolute;  left: 50px; top: 100px;}
+
+
+.loc_img{
+    height: 100%;
+    display: none;
+    position: relative;
+    z-index: 1;
+}
+
+
+.wave{background-size: cover; 
+    animation: moveup1 10s infinite; z-index: 98;}
+
+@keyframes moveup1{
+    0%{margin-bottom: 0px;}
+    50%{margin-bottom: 10px;}
+    100%{margin-bottom: 0px;}
+}
+
+/******************************컨텐츠4 시작***********************/
+
+.sec4{
+    background-image: url(../images/beach.png);
+    background-repeat: no-repeat; width: 100%; height: 500px; 
+    background-position: bottom; background-size: contain; 
+    margin: 0 auto; text-align:center; 
+
+}
+
+
+.sec4 h1{font-size: 2em; padding-top: 50px; 
+    background-image: url(../images/bird2.png); 
+    background-repeat: no-repeat; padding-bottom: 30px;}
+
+/* 내용시작 */
+.news{width: 100%; height: 330px; padding-top: 30px; box-sizing: border-box;}
+.news::before,.news::after{display: block; content: ''; clear: both;}
+.news div{float: left; width: 30%; margin-right: 20px; transform: translateX(35px);
+border-radius: 10px; overflow: hidden; background-color: #010042; box-sizing: border-box;}
+
+.news img{width: 100%;border-radius: 10px; transition: 1s;}
+.news div h3{width: 300px; /*background-color: aquamarine; */ transform: translate(30px, 50px); color: #fff;  transition: 2s;}
+
+.news div:hover img{transform: translateY(-15%); transition-duration: 1s;}
+.news div:hover h3{transform: translate(30px, -20px); transition-duration: 1s;}
+
+
+/******************************컨텐츠5 시작***********************/
+
+.sec5::before, .sec5::after{display: '';content: none; clear: both;}
+.sec5{width: 100%; height: 100px; background-color: #f5e3b1;}
+.sec5 div img{float: left; width: 120px; padding-top: 30px; box-sizing: border-box;}
+
+
+/*********************************footer*************************/
+
+footer{background-color: #010042; width: 100%; height: 150px; padding-top: 30px; position: relative;}
+footer::before, footer::after{display: '';content: none; clear: both;}
+footer img{float: left; position: absolute; left: 25%; padding-top: 10px; height: 100px;}
+footer .asso{float: left; position: absolute; left: 60%; top: 20%; padding-top: 20px; font-weight: lighter;}
+.asso p{font-size: 0.8em; padding-top: 3px; color: #fff; font-family: 'Nanum Gothic', sans-serif; width: 400px;}
+.asso p a{color: #fff;  font-family: 'Nanum Gothic', sans-serif;}
+.email{color: #fff;}
+
+/*********************************bx slider*************************/
+
+.bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+}
+
+
+
+
+/**************sub******************/
+
+.sub{background-image: url(../images/wave_top.png);
+    background-repeat: no-repeat; background-size: cover; width: 100%; height: 800px;}
+
+.hello::after, .hello::before{display:block; content: ''; clear: both;}
+.hello{width: 100%; height: 600px; padding-top: 250px; position: relative;}
+
+.hello img{float: left; width: 30%; padding-left: 50px;}
+.s_right{float: left; width: 60%; padding-left: 50px; padding-top: 50px;}
+
+.hello{width: 100%; height: 550px; position: relative;  
+}
+.title h3{position: absolute; top: 260px; left: 550px;}
+.title > img{width: 200px; position: absolute; top: 250px; left: 500px;}
+
+
+.hello > p {font-family: 'Nanum Gothic', sans-serif;}
+.sign{float: right; width: 20%; padding-left: 3%; padding-top: 50px;  width: 200px; height: 150px;}
+.sign span{font-family: 'Nanum Pen Script', cursive; font-size: 3em; margin-left: 10px;
+    font-weight: lighter;}
+
+
+/*******************************subpage_point_info*********************************/
+
+
+.sub_sec1{
+    width: 100%;
+    height: 300px;
+    background-color: yellow;
+    background: url(../images/loc6.jpg) no-repeat;
+    background-position: center;
+
+}
+
+
+
+
+.sub_menu::after, .sub_menu::before{display: block; content: ''; clear: both;}
+.sub_menu li{
+    float: left;
+    width: 15%;
+    height: 50px;
+    background-color: aqua;
+    text-align: center;
+    padding-top: 15px;
+    box-sizing: border-box;
+    margin: 2%;
+    border-radius: 15px;
+    background: #e0e0e0;
+    box-shadow:  5px 5px 5px #bebebe, -5px -5px 5px #ffffff;
+
+}
+
+.sub_menu li:hover{
+    background: #84c5e6;
+
+}
+
+
+
+.sub_sec2{
+    width: 100%;
+    height: 1000px;
+    text-align: center;
+
+}
+
