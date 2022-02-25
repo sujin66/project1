@@ -230,8 +230,7 @@ background: linear-gradient(transparent, rgba(71, 205, 241, 0.4) 30%, transparen
 
     }
     .busan_info{
-        width: 450px; height: 450px; 
-        /* background-color: #cfecf2;  */
+        width: 600px; height: 400px; 
         border-radius:10px;
         overflow: hidden;
         position: relative;
@@ -246,13 +245,18 @@ background: linear-gradient(transparent, rgba(71, 205, 241, 0.4) 30%, transparen
 .busan_info_default h3{position: absolute;  left: 50px; top: 50px;}
 .busan_info_default p{position: absolute;  left: 50px; top: 100px;}
 
+.loc_img > img{height: auto;}
+.loc_img h3{position: absolute;  right: 50px; top: 50px; color: #fff; font-size: 2em;}
+.loc_img p{position: absolute;  right: 50px; top: 100px; color: #fff; font-size: 1.2em; text-align: right;}
 
 .loc_img{
-    height: 100%;
+    width: 450px; height: 250px; 
     display: none;
     position: relative;
     z-index: 1;
 }
+
+
 
 
 .wave{background-size: cover; 
@@ -321,7 +325,7 @@ footer .asso{float: left; position: absolute; left: 60%; top: 20%; padding-top: 
 
 
 
-/**************sub******************/
+/**************sub aboutus******************/
 
 .sub{background-image: url(../images/wave_top.png);
     background-repeat: no-repeat; background-size: cover; width: 100%; height: 800px;}
@@ -344,14 +348,14 @@ footer .asso{float: left; position: absolute; left: 60%; top: 20%; padding-top: 
     font-weight: lighter;}
 
 
-/*******************************subpage_point_info*********************************/
+/****************************surfing point*********************************/
 
 
 .sub_sec1{
     width: 100%;
-    height: 300px;
+    height: 400px;
     background-color: yellow;
-    background: url(../images/loc6.jpg) no-repeat;
+    background: url(../images/loc_top.jpg) no-repeat;
     background-position: center;
 
 }
@@ -379,7 +383,6 @@ footer .asso{float: left; position: absolute; left: 60%; top: 20%; padding-top: 
     background: #84c5e6;
 
 }
-
 
 
 .sub_sec2{
