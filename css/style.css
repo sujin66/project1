@@ -7,6 +7,7 @@
 @font-face {
     font-family:'jalnanoft';
     src: url(JalnanOTF.otf) format('opentype')
+
 }
 @font-face {
     font-family: 'SpoqaHanSansNeo-Regular';
@@ -29,19 +30,21 @@ font-family: 'Nanum Pen Script', cursive;
 ul{list-style: none;}
 a{text-decoration: none; color: inherit;}
 button{border: none;}
-h1{font-family:'jalnanoft'}
-h3{font-size: 2em; font-family: 'Nanum Pen Script', cursive;}
-
+h1{font-family:'jalnanoft';}
+h3{font-size: 1.5em; font-family: 'SpoqaHanSansNeo-Regular'; font-weight: normal;}
+p{font-size: 16px; font-family: 'SpoqaHanSansNeo-Regular';}
 
 
 /**************************헤더*****************************/
 
-header{width: 100%; height: 100px; text-align: center; position:relative; z-index: 2;}
+header .inner{height: 70px; text-align: center; position:relative; z-index: 99;}
 
 /*헤더 좌우*/
-header .inner::after, header .inner::before{display: block; content:''; clear: both;}
-header .logo{float: left; width: 25%; height: 100px; padding-top: 15px; box-sizing: border-box; background-color: #010042;}
-header nav{float: left; width: 75%; height: 100px; padding-top: 50px; box-sizing: border-box;}
+/* header .inner::after, header .inner::before{display: block; content:''; clear: both;} */
+header .logo{width: 250px; height: 100px; padding-top: 15px; box-sizing: border-box; background-color: #010042;
+position: absolute; top: 0;
+}
+header nav{width: 70%; position: absolute; top: 15px; left: 300px;}
 
 /*navi_mainmenu*/
 .mainmenu::after .mainmenu::before{clear: both; content: ''; display: block;}
@@ -51,11 +54,12 @@ header nav .mainmenu > li{width: 20%; height: 50px; float: left; color: #fff;
 header nav .mainmenu > li > a:hover{border-bottom: 3px solid #010042;}
 
 /*navi_submenu*/
-header nav .submenu{display: none; position: relative; top: 20px;
+header nav .submenu{display: none; position: relative; top: 15px;
     z-index: 3; width: 90%;
     border-radius: 5px; 
-    background-color: #fff;
+    background-color: rgba(225, 225, 225, 0.8);
     margin-left: 10px; overflow: hidden;
+    border: 1px solid #eee;
     box-shadow: 1px 1px 2px #e0e7e7,
         -1px -1px 2px #ffffff;
 
@@ -66,6 +70,8 @@ header nav .submenu li:hover {background-color: #010042; color:#fff;}
 
 
 /******************************컨텐츠1*************************/
+
+.sec1{padding-bottom: 50px;}
 .con1{
     width: 100%; height: 800px;
     background-image: url(../images/surfergray.jpg);
@@ -104,42 +110,59 @@ header nav .submenu li:hover {background-color: #010042; color:#fff;}
 
 /* 갈매기배경 */
 .seagull_1{position: absolute; top: 200px; left: 700px;animation: moveup 2s infinite; }
-.seagull_2{position: absolute; top: 200px; animation: moveup 3s infinite; }
+.seagull_2{position: absolute; top: 200px; animation: moveup 10s infinite; }
 
 @keyframes moveup{
-    0%{margin-top: 0px;}
-    50%{margin-top: 5px;}
-    100%{margin-top: 0px;}
+    0%{top: 200px;}
+    50%{top: 220px;}
+    100%{top: 200px;}
 }
 /*갈매기배경end */
 
 
 /******************************컨텐츠2***********#010042*******/
-.sec2{height: 800px; width: 100%; position: relative; background-color: #cfecf2; z-index: 99;}
+
+
+.sec2{width: 100%; position: relative; background-color: #cfecf2; z-index: 5; padding: 100px 0; }
 
 /*******배경 시작************/
+.wave{width: 100%;}
 
 /* 파도_상 */
-.wave > .w1{position: absolute; top: -150px; background-size: cover; 
-    animation: moveleft 10s infinite; z-index: 98;}
+.wave > .w1{position: absolute; 
+    top: -100px; 
+    width: 100%;
+    background-size: cover; 
+    z-index: 6;
+    overflow: hidden;
+    text-align: center;}
+
+.wave > .w1 img{animation: moveleft 6s infinite; background-color: #fff;}
 
 @keyframes moveleft{
-    0%{margin-left: -50px;}
-    50%{margin-left: 0px;}
-    100%{margin-left: -50px;}
+    0%{transform: translateX(-50px);}
+    50%{transform: translateX( 0px);}
+    100%{transform: translateX(-50px);}
 }
 
 /* 파도_하 */
 .wave > .w2{
-    position: absolute; bottom: -150px; background-size: cover; 
-    animation: movedown 3s infinite; z-index: 98;}
+    position: absolute; bottom: -150px; left: 0; height: 150px; width: 100%;
+    z-index: 6;
+    overflow: hidden;
+    text-align: center;
+    background: url(../images/wave2.png) repeat-x;
+    background-position: center 0;
+    animation: bgmoveleft 8s infinite;
+        /* background-color: yellow; */
+    }
 
-@keyframes movedown{
-    0%{margin-bottom: 0px;}
-    50%{margin-bottom: 10px;}
-    100%{margin-bottom: 0px;}
+@keyframes bgmoveleft{
+    0%{background-position: center -20px;}
+    50%{background-position: center 0px;}
+    100%{background-position: center -20px;}
 }
-    
+
 /* 사람_하 */
 .tube1{position: absolute; bottom: 10px; left: 40%; z-index: 99; 
         animation: rotate 3s ease-in-out infinite;}
@@ -155,7 +178,7 @@ header nav .submenu li:hover {background-color: #010042; color:#fff;}
 /*******배경끝************/
 /*******내용시작**********/
 
-.con2{width: 100%; height: 800px; margin-top: 100px; text-align: center; }
+.con2{width: 100%; height: 800px; text-align: center; }
 .event{text-align: center;} 
 .con2 h1{font-size: 2em; margin: 25px;}
 .poster h3{margin-top: 30px; padding-bottom: 15px; box-sizing: border-box;}
@@ -191,82 +214,146 @@ button{width: 150px;  height: 40px; border-radius: 50px; margin-top: 20px; font-
 
 
 .sec3{
-background: linear-gradient(transparent, rgba(71, 205, 241, 0.4) 30%, transparent);
+background:
+linear-gradient(180deg, rgb(14, 40, 112), rgba(71, 205, 241, 0.4) 50%, transparent);
 }
-.con3{
-    width: 100%; height: 1000px; margin-top: 200px; text-align: center; 
+
+.fire{position: relative; padding-top: 200px;}
+.fire img:nth-child(1){width: 300px; position: absolute; left: -5%; top: 80px; animation: bomb 3s ease-in-out;}
+.fire img:nth-child(2){width: 120px; position: absolute; left: -10%; top: 80px; animation: bomb 2s ease-in-out;}
+.fire img:nth-child(3){width: 150px; position: absolute; left: 95%; top: 150px; animation: bomb 1.5s ease-in-out;}
+.fire img:nth-child(4){width: 120px; position: absolute; left: 85%; top: 180px; animation: bomb 4s ease-in-out;}
+
+@keyframes bomb{
+    0%{transform: scale(0);}
+    100%{transform: scale(100%);}
 }
+
+/* 
+.fire{
+    height: auto;
+    background:
+    url(../images/fire_blue.png),
+    url(../images/fire_red.png),
+    url(../images/fire_blue.png) no-repeat,
+    url(../images/fire_red.png);
+    background-repeat: no-repeat;
+    background-size: 100%, 300px, 120px, 200px, 200px;
+    background-position: center, 5% 180px, 30% 130px, 95% 120px, 80% 220px; 
+    background-blend-mode: screen ;
+    padding: 200px 0px 50px 0px;    
+} */
+
 .con3 h3{text-align: center; padding-bottom: 20px;}
 .con3 h1{text-align: center; font-size: 2em; padding-bottom: 50px;}
 
 
+.maploc{position: relative;}
 .maploc::before, .maploc::after{display: block; content: ''; clear: both;}
-.map{
-    width: 60%; height: 700px; float:left; position: relative;
+.map{ /*이미지 지도 전체 크기 설정 컨텐츠가 높이 기준이 됨*/
+    width: 60%; height: 700px; position: relative; background-size: contain;
     background-image: url(../images/busanmap2.png); background-repeat: no-repeat;
 }
 
 
+.map img:nth-child(1){width: 50PX; position: absolute; left: 600px; top: 200px;}
+.map img:nth-child(2){width: 50px; position: absolute; left: 540px; top: 300px;}
+.map img:nth-child(3){width: 50px; position: absolute; left: 480px; top: 330px;}
+.map img:nth-child(4){width: 50px; position: absolute; left: 420px; top: 340px;}
+.map img:nth-child(5){width: 50px; position: absolute; left: 220px; top: 550px;}
 
-.map img:nth-child(2){width: 200px; position:absolute; left: 550px; top: 500px;}
-
-.map img:nth-child(1){width: 50PX; position: absolute; left: 75%; top: 18%;}
-.map img:nth-child(2){width: 50px; position: absolute; left: 70%; top: 28%;}
-.map img:nth-child(3){width: 50px; position: absolute; left: 60%; top: 32%;}
-.map img:nth-child(4){width: 50px; position: absolute; left: 55%; top: 35%;}
-.map img:nth-child(5){width: 50px; position: absolute; left: 15%; top: 62%;}
-
-.map img:nth-child(1):hover{width: 60px;}
-.map img:nth-child(2):hover{width: 60px;}
-.map img:nth-child(3):hover{width: 60px;}
-.map img:nth-child(4):hover{width: 60px;}
-.map img:nth-child(5):hover{width: 60px;} 
+.map img{transition: 0.2s;}
+.map img:hover{transform:scale(1.2); transform-origin: center bottom;}
 
 
-    .loc_info{
-        width: 40%; height: 700px; float:left; padding-top: 300px; 
-        box-sizing: border-box;
+.loc_info{
+/* width: 40%; */
+position: absolute; top: 200px; right: 5%; /*내용 전체위치 변경 시 수정*****************/
+width: 300px; height: 450px; 
+border-radius:10px;
+overflow: hidden;
+box-shadow: 0px 0px 20px #5d9bae;
+background-color: #fff;
+text-align: center;
+} 
+
+.busan_info{
+width: 100%; height: 100%;
+position: relative;
+}
 
 
-    }
-    .busan_info{
-        width: 600px; height: 400px; 
-        border-radius:10px;
-        overflow: hidden;
-        position: relative;
-        box-shadow: 20px 20px 40px #e0e7e7,
-        -20px -20px 40px #ffffff;
-    }
 
-.busan_info_default img:nth-child(1){position: absolute; right: 20px; top: 20px;}
-.busan_info_default img:nth-child(2){position: absolute;  left: 0; bottom: 40px; width: 450px;}
-.busan_info_default img:nth-child(3){position: absolute;  left: 0; bottom: -100px; width: 450px; z-index: 2;}
-.busan_info_default img:nth-child(4){position: absolute;  left: 0; bottom: -100px; width: 450px; z-index: 3;}
-.busan_info_default h3{position: absolute;  left: 50px; top: 50px;}
-.busan_info_default p{position: absolute;  left: 50px; top: 100px;}
+/*기본값 대략위치*/
+.busan_info_default{width: 100%; height: 100%; 
+    background: url(../images/bird2.png), url(../images/kwanganbr.png); 
+    background-position: 20px 20px, center 200px; 
+    background-repeat: no-repeat; text-align: left; 
+    background-size: auto, 100%; 
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
 
-.loc_img > img{height: auto;}
-.loc_img h3{position: absolute;  right: 50px; top: 50px; color: #fff; font-size: 2em;}
-.loc_img p{position: absolute;  right: 50px; top: 100px; color: #fff; font-size: 1.2em; text-align: right;}
+
+
+/*★★★★클래스명 변경*/
+.card_wave img:nth-child(1){position: absolute; bottom: 0px; left: 0; width: 100%; z-index: 2;}
+.card_wave img:nth-child(2){position: absolute; bottom: 0px; left: 0; width: 100%; z-index: 3;}
+
 
 .loc_img{
-    width: 450px; height: 250px; 
+    width: 300px; height: 400px; 
     display: none;
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    top: 0; left: 0;
+
+}
+
+.loc_img > img{
+    height: 100%; 
+    /* transform: translateX(-50%); */
+}
+
+.loc_img h3{
+    position: absolute;  right: 50px; bottom: -60px; color: #fff;
+    font-size: 1.2em;
+    filter: drop-shadow(0,0,0,black);
+    z-index: 5;
+    animation: fmtop 2s ease-in-out;
+}
+
+.loc_img p{
+    position: absolute;  right: 50px; bottom: -15px; 
+    color: #fff; font-size: 0.8em; 
+    z-index: 5;
+    text-align: right;
+    animation: fmbtm 2s ease-in-out;
+}
+
+@keyframes fmtop{
+    0%{transform: translateX(-100%);}
+    100%{transform: translateX(0);}
+}
+@keyframes fmbtm{
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(0);}
 }
 
 
+/*★★★★각 카드에 호버시 나올 이미지 위치*/
+.round_img{
+    position: absolute; top: 70%; left: 30%; z-index: 6;}/* 동그란 이미지 전체 위치*/
+.round_img div{    display: none;}/* 셋트 겹치기*/
+.round_img img{border-radius: 10px; margin: 0 20px; background: yellow;}
+.round_img img:nth-child(1){width: 100px; transform: translateY(20px);} /*높이차이*/
+.round_img img:nth-child(2){width: 110px; transform: translateY(0px);}
+.round_img img:nth-child(3){width: 120px; transform: translateY(-20px);}
 
 
-.wave{background-size: cover; 
-    animation: moveup1 10s infinite; z-index: 98;}
 
-@keyframes moveup1{
-    0%{margin-bottom: 0px;}
-    50%{margin-bottom: 10px;}
-    100%{margin-bottom: 0px;}
-}
+
 
 /******************************컨텐츠4 시작***********************/
 
@@ -274,8 +361,7 @@ background: linear-gradient(transparent, rgba(71, 205, 241, 0.4) 30%, transparen
     background-image: url(../images/beach.png);
     background-repeat: no-repeat; width: 100%; height: 500px; 
     background-position: bottom; background-size: contain; 
-    margin: 0 auto; text-align:center; 
-
+    margin: 0 auto; text-align:center;
 }
 
 
@@ -348,7 +434,7 @@ footer .asso{float: left; position: absolute; left: 60%; top: 20%; padding-top: 
     font-weight: lighter;}
 
 
-/****************************surfing point*********************************/
+/***************************location*********************************/
 
 
 .sub_sec1{
@@ -357,10 +443,7 @@ footer .asso{float: left; position: absolute; left: 60%; top: 20%; padding-top: 
     background-color: yellow;
     background: url(../images/loc_top.jpg) no-repeat;
     background-position: center;
-
 }
-
-
 
 
 .sub_menu::after, .sub_menu::before{display: block; content: ''; clear: both;}
@@ -368,20 +451,15 @@ footer .asso{float: left; position: absolute; left: 60%; top: 20%; padding-top: 
     float: left;
     width: 15%;
     height: 50px;
-    background-color: aqua;
     text-align: center;
     padding-top: 15px;
     box-sizing: border-box;
     margin: 2%;
-    border-radius: 15px;
-    background: #e0e0e0;
-    box-shadow:  5px 5px 5px #bebebe, -5px -5px 5px #ffffff;
-
+    background-color: blueviolet;
 }
 
 .sub_menu li:hover{
     background: #84c5e6;
-
 }
 
 
@@ -389,6 +467,5 @@ footer .asso{float: left; position: absolute; left: 60%; top: 20%; padding-top: 
     width: 100%;
     height: 1000px;
     text-align: center;
-
 }
 
