@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+
+
+.loc_info{
+    position: absolute; 
+    top: 250px;
+    right: 20px;
+    width: 300px; 
+    height: 350px; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #52d4fb;
+    background-color: #fff;
+}
+
+.busan_info{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    }
+
+
+.busan_info_default{background: url(images/bird2.png), url(imgages/kwanganbr.png.png); background-position: 20px 20px,  50px center;}
+
+.wave img:nth-child(1){position: absolute; left: 0px; bottom: -50px; width: 100%; z-index: 2;}
+.wave img:nth-child(2){position: absolute; left: 0px; bottom: -50px; width: 100%; z-index: 3;}
+
+
+.loc_img{
+    width: 300px; height: 50px; 
+    display: none;
+    position: absolute;
+    top: 0; left: 0;
+
+}
+
+.loc_img > img{height: 100%; transform: translateX(-50%);}
+.loc_img h3{position: absolute;  right: 50px; top: 50px; color: #fff; font-size: 2em;}
+.loc_img p{position: absolute;  right: 50px; top: 100px; color: #fff; font-size: 1.2em; text-align: right;}
+        
+    </style>
+</head>
+<body>
+<div class="loc_info">
+    <div class="busan_info">
+        <div class="busan_info_default">
+            <!-- <img src="images/bird2.png" alt="갈매기">
+            <img src="images/kwanganbr.png" alt="광안대교 일러스트"> -->
+            <h3>웨이브시티<span>부산</span></h3>
+            <p>도심 속에서 즐기는<br>서핑 라이프</p>
+        </div>
+        <div class="loc_img">
+        <img src="images/loc1.jpg">
+            <h3><span>임랑</span>해수욕장</h3>
+            <p>부산광역시 기장군 장안읍 <br>임랑리에 위치한 해수욕장</p>
+        </div>
+        <div class="loc_img">
+            <img src="images/loc2.jpg">
+            <h3><span>송정</span>해수욕장</h3>
+            <p>부산광역시 해운대구 송정동<br>서퍼들이 사랑하는 부산 최고의 서핑성지<p>
+        </div>
+        <div class="loc_img">
+            <img src="images/loc3.jpg">
+            <h3><span>해운대</span>해수욕장</h3>
+            <p>부산광역시 해운대구 중동<br>최고의 해변에서 즐기는<br>최고의 파도</p>
+        </div>
+        <div class="loc_img">
+            <img src="images/loc4.jpg">
+            <h3><span>광안리</span>해수욕장</h3>
+            <p>부산광역시 수영구 광안2동<br>평소 물이 잔잔하지만, <br>
+                파도가 칠 때는 양질의 파도로 인기 만점 </p>
+        </div>
+        <div class="loc_img">
+            <img src="images/loc5.jpg">
+            <h3><span>다대포</span>해수욕장</h3>
+            <p> 부산광역시 사하구 다대동<br> 드넓은 해변과 얕은 수심<br> 안전한 모래바닥</p>
+        </div>
+    </div>
+    <div class="wave"> 
+        <img class="wave" src="images/wave111.png" alt="파도1">
+        <img class="wave" src="images/wave222.png" alt="파도2">
+    </div>
+</div>  
+</body>
+</html>
