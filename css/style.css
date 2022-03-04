@@ -23,6 +23,10 @@ font-family: 'Nanum Pen Script', cursive;
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
+
+
+
 
 /*************************공통 & 전체*********************/
 *{padding: 0; margin: 0; font-family:'SpoqaHanSansNeo-Regular'}
@@ -31,8 +35,11 @@ ul{list-style: none;}
 a{text-decoration: none; color: inherit;}
 button{border: none;}
 h1{font-family:'jalnanoft';}
-h3{font-size: 1.5em; font-family: 'SpoqaHanSansNeo-Regular'; font-weight: normal;}
+h3{font-size: 2em; font-family: 'Nanum Pen Script', cursive; font-weight: normal; color: #fff;}
+h4{color: #fff;}
 p{font-size: 16px; font-family: 'SpoqaHanSansNeo-Regular';}
+
+
 
 
 /**************************헤더*****************************/
@@ -181,7 +188,11 @@ header nav .submenu li:hover {background-color: #010042; color:#fff;}
 .con2{width: 100%; height: 800px; text-align: center; }
 .event{text-align: center;} 
 .con2 h1{font-size: 2em; margin: 25px;}
-.poster h3{margin-top: 30px; padding-bottom: 15px; box-sizing: border-box;}
+.con2 h3{color: #010042; }
+.poster h3{margin-top: 30px; padding-bottom: 15px; 
+    box-sizing: border-box; font-family: 'SpoqaHanSansNeo-Regular'; color: #010042; 
+    font-size: 1.5em; font-weight: bolder;
+}
 
 .poster::before, .poster::after{clear: both; content: ''; display: block;}
 .poster{width: 100%; height: 600px; padding: 20px; box-sizing: border-box; text-align: center;}
@@ -195,17 +206,22 @@ header nav .submenu li:hover {background-color: #010042; color:#fff;}
 
 button{width: 150px;  height: 40px; border-radius: 50px; margin-top: 20px; font-size: 1.2em; color:#fff; background-color: #010042;}
 
-.post1:hover{background-color: #010042; color: #fff;}
-.post2:hover{background-color: #010042; color: #fff;}
-.post3:hover{background-color: #010042; color: #fff;}
+.post1:hover{background-color: #010042;}
+.post2:hover{background-color: #010042;}
+.post3:hover{background-color: #010042;}
+
+
+.post1:hover > h3{color: #fff;}
+.post2:hover > h3{color: #fff;}
+.post3:hover > h3{color: #fff;}
 
 .post1:hover > button{background-color: #fff; color: #010042;}
 .post2:hover > button{background-color: #fff; color: #010042;}
 .post3:hover > button{background-color: #fff; color: #010042;}
 
-.post1 button:hover{transform:scale(1.2)}
-.post2 button:hover{transform:scale(1.2)}
-.post3 button:hover{transform:scale(1.2)}
+.post1 button:hover{transform:scale(1.2); font-weight: bolder;}
+.post2 button:hover{transform:scale(1.2); font-weight: bolder;}
+.post3 button:hover{transform:scale(1.2); font-weight: bolder;}
 
 /*******내용end**********/
 /******************************컨텐츠2 끝***********#010042*******/
@@ -219,10 +235,10 @@ linear-gradient(180deg, rgb(14, 40, 112), rgba(71, 205, 241, 0.4) 50%, transpare
 }
 
 .fire{position: relative; padding-top: 200px;}
-.fire img:nth-child(1){width: 300px; position: absolute; left: -5%; top: 80px; animation: bomb 3s ease-in-out;}
-.fire img:nth-child(2){width: 120px; position: absolute; left: -10%; top: 80px; animation: bomb 2s ease-in-out;}
-.fire img:nth-child(3){width: 150px; position: absolute; left: 95%; top: 150px; animation: bomb 1.5s ease-in-out;}
-.fire img:nth-child(4){width: 120px; position: absolute; left: 85%; top: 180px; animation: bomb 4s ease-in-out;}
+.fire img:nth-child(1){width: 300px; position: absolute; left: -5%; top: 80px;/*animation: bomb 3s ease-in-out;*/}
+.fire img:nth-child(2){width: 120px; position: absolute; left: -10%; top: 80px;/*animation: bomb 2s ease-in-out;*/}
+.fire img:nth-child(3){width: 150px; position: absolute; left: 95%; top: 150px;/*animation: bomb 1.5s ease-in-out;*/}
+.fire img:nth-child(4){width: 120px; position: absolute; left: 85%; top: 180px;/*animation: bomb 4s ease-in-out;*/}
 
 @keyframes bomb{
     0%{transform: scale(0);}
@@ -275,6 +291,7 @@ overflow: hidden;
 box-shadow: 0px 0px 20px #5d9bae;
 background-color: #fff;
 text-align: center;
+color: #010042;
 } 
 
 .busan_info{
@@ -291,10 +308,13 @@ position: relative;
     background-repeat: no-repeat; text-align: left; 
     background-size: auto, 100%; 
     text-align: left;
-    padding-left: 30px;
-    padding-top: 20px;
+    padding-left: 50px;
+    padding-top:30px;
     box-sizing: border-box;
+
 }
+
+.busan_info_default > h3{color:#010042; }
 
 
 
@@ -362,6 +382,7 @@ position: relative;
     background-repeat: no-repeat; width: 100%; height: 500px; 
     background-position: bottom; background-size: contain; 
     margin: 0 auto; text-align:center;
+    padding-top: 100px;
 }
 
 
@@ -398,6 +419,19 @@ footer .asso{float: left; position: absolute; left: 60%; top: 20%; padding-top: 
 .asso p{font-size: 0.8em; padding-top: 3px; color: #fff; font-family: 'Nanum Gothic', sans-serif; width: 400px;}
 .asso p a{color: #fff;  font-family: 'Nanum Gothic', sans-serif;}
 .email{color: #fff;}
+
+
+
+
+/**********scroll effect************/
+.sec1{display: none;}
+.sec2{display: none;}
+.sec3{display: none;}
+.sec4{display: none;}
+.sec5{display: none;}
+footer{display: none;}
+
+
 
 /*********************************bx slider*************************/
 
@@ -469,3 +503,184 @@ footer .asso{float: left; position: absolute; left: 60%; top: 20%; padding-top: 
     text-align: center;
 }
 
+/***************************web_app.*********************************/
+
+
+
+/****sec1_web-application ****/
+
+
+.wa_sec1{
+    width: 100%;
+    height: 900px;
+    background: url(../images/app_bg.jpg) center no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 600px;
+    box-sizing: border-box;
+
+}
+
+.center_text h1{
+color: #fff;
+font-family: 'Montserrat', sans-serif;
+font-size: 4em;
+font-weight: bolder;
+
+}
+.center_text h3{
+    color: #f2f2f2;
+    font-family: 'SpoqaHanSansNeo-Regular';
+    }
+
+.text_subs{
+    font-family: 'SpoqaHanSansNeo-Regular';
+    font-size: 16px;
+}
+
+.center_sub{
+    margin-top: 30px 0;
+}
+
+.center_sub h3:nth-child(1){
+    display: inline-block; 
+    padding-right: 20px;
+    border-right: 2px dotted #fefefe; 
+    box-sizing: border-box;
+}
+.center_sub h3:nth-child(2){
+    display: inline-block; 
+    padding-left: 20px;
+}
+
+
+.app_btn{
+    background-color: #cfecf2 ;
+    border-radius: 5px;
+    color: #010042;
+    font-family: 'SpoqaHanSansNeo-Regular';
+    font-weight: bolder;
+}
+
+.app_btn:hover{
+    cursor: pointer;
+    filter: drop-shadow(5px 5px 0 #010042);
+    
+}
+
+
+/******************schedule**********************/
+
+.wa_sec3{
+    text-align: center;
+}
+
+.wa_sec3 h1{
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    box-sizing: border-box;
+    padding: 50px 0 30px 0;
+    box-sizing: border-box;
+
+}
+
+.sche_title{
+    width: 50px;
+    border-bottom: 2px solid grey;
+}
+
+.sche_text{
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+
+}
+.sche_text::before, .sche_text::after{display: block; content: ''; clear: both;}
+
+.sche_text h3{
+    width: 33.3%;
+    float: left;
+    color: gray;
+    padding: 20px 0 10px 0;
+    box-sizing: border-box;
+    font-family: 'SpoqaHanSansNeo-Regular';
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+
+.sche_text h3:hover{
+    color: #000;
+}
+
+.day{
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    border: 1px solid red;
+    color: #777;
+}
+
+.day img{
+    height: 80%;
+}
+
+table{
+    width: 100%;
+}
+
+tr{
+    border-bottom: 2px solid orangered;
+}
+
+table td:nth-child(1){
+    width: 30%;
+    height: 30px;
+    padding: 20px 0 20px 50px;
+    text-align: right;
+    box-sizing: border-box;
+    color: #666;
+    font-weight: bolder;
+}
+
+table td:nth-child(2){
+    width: 25%;
+    height: 30px;
+    padding: 20px 0 20px 50px;
+    text-align: left;
+    box-sizing: border-box;
+    color: #777;
+}
+
+table td:nth-child(3){
+    width: 40%;
+    height: 30px;
+    padding: 20px 0 20px 50px;
+    text-align: left;
+    box-sizing: border-box;
+    color: #777;
+}
+
+
+/******************홍보문구**********************/
+
+
+.wa_sec2{
+    height: 500px;
+    text-align: center;
+    padding-top: 250px;
+    box-sizing: border-box;
+    color: #fff;
+    background: 
+    url(../images/wave111.png);
+
+}
+.wa_sec2 h1{
+    font-size: 2em;
+    font-family: 'SpoqaHanSansNeo-Regular';
+}
+.wa_sec2 h3{
+    padding-bottom: 20px;
+    font-size: 2em;
+}
