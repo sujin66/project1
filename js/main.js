@@ -54,15 +54,13 @@ $(function(){
 /********************championship schedule****************/
 
     var now_index;
-    // var src_off = $('.map img').attr('src');
-    // var src_on = src_off.replace('01','02');
 
 
 
-    $('sche_text').click(function(){
+    $('sche_text h3').click(function(){
         now_index = $(this).data('index');
 
-        $('.sche_text').hide().eq(now_index).show().hover(function(){
+        $('.sche_info').hide().eq(now_index).show().hover(function(){
             $('.day').eq(now_index).fadeIn();
         }, function(){
             $('.day').fadeOut();
