@@ -487,11 +487,25 @@ footer .asso{float: left; position: absolute; left: 60%; top: 20%; padding-top: 
 .sub_sec1{
     width: 100%;
     height: 400px;
-    background-color: yellow;
-    background: url(../images/loc_top.jpg) no-repeat;
-    background-position: center;
+    background: 
+    url(../images/beach.png) center 20px no-repeat, url(../images/sj3.jpg) center center no-repeat;
+    background-size: cover;
 }
 
+.sub_sec2{
+    width: 100%;
+    height: 3000px;
+    text-align: center;
+    background-image: url(../images/wave2.png) no-repeat;
+
+}
+
+.sub_menu{
+    width: 100%;
+    height: 100px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
 
 .sub_menu::after, .sub_menu::before{display: block; content: ''; clear: both;}
 .sub_menu li{
@@ -499,22 +513,70 @@ footer .asso{float: left; position: absolute; left: 60%; top: 20%; padding-top: 
     width: 15%;
     height: 50px;
     text-align: center;
-    padding-top: 15px;
-    box-sizing: border-box;
     margin: 2%;
-    background-color: blueviolet;
+    font-size: 1.5em;
+    padding: 10px;
+    box-sizing: border-box;
+    background: url(../images/board01.png) center no-repeat;
+    background-size: 100%;
 }
 
 .sub_menu li:hover{
-    background: #84c5e6;
+    background: url(../images/board01.png) center 10px no-repeat;
+    background-size: contain;
+    font-weight: bolder;
+
 }
 
 
-.sub_sec2{
-    width: 100%;
-    height: 1000px;
+
+.surfp{
+
+width: 100%;
+height: 550px;
+/* background-color: burlywood; */
+margin-bottom: 10px;
+display: flex;
+justify-content: center;
+box-sizing: border-box;
+background-image: url(../images/wave1.png);
+background-position: 0px 20px ;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.surfpinfo
+{
+    width: 40%;
     text-align: center;
 }
+
+.surfpinfo > h1{
+padding-top: 250px;
+}
+
+.surfpinfo > h4{
+    padding: 10px 0;
+    width: 300px;
+    transform: translateX(25%);
+    color: #010042;
+}
+    
+
+
+.surfp iframe{
+    width: 40%;
+    margin: 50px;
+}
+
+
+.surfpimg{
+    width: 150px;
+    height: 100px;
+}
+
+
 
 /***************************대회정보*********************************/
 
@@ -614,41 +676,69 @@ font-weight: bolder;
 
 /******************** 대회일 외부박스 ******************/
 .sche_text{
-    width: 50%;
+    width: 70%;
     text-align: center;
-    margin-left: 25%;
+    margin-left: 15%;
+    padding-top: 10px;
 }
 
 /******************** 대회일 내부박스 1/3-33.3% ******************/
 .sche_text::before, .sche_text::after{display: block; content: ''; clear: both;}
 .sche_text h4{
-    width: 33.3%;
+    width: 30%;
+    height: 50px;
     float: left;
     color: gray;
-    padding: 30px 0 20px 0;
-    box-sizing: border-box;
     font-family: 'SpoqaHanSansNeo-Regular';
-    font-size: 1.2em;
     font-weight: bolder;
+    border-radius: 10px 10px 0 0;
+    padding-top: 20px;
+    box-sizing: border-box;
+    margin: 0 1%
 }
 
-.sche_text h4:hover{color: red; transform: scale(1.2);}
+.sche_text h4:hover{
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: black;
+}
 
-/******************** 일자별스케줄*****************/
+.sche_info{
+    position: relative;
+}
+
+.day{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+
+.sche_info {
+    height: 500px;
+    padding: 20px 0;
+
+    box-sizing: border-box;
+}
+
+
+.sche_info p{
+    color: gray;
+    font-size: 1.2em;
+    font-weight: bolder;
+    padding: 10px 0;
+}
+.sche_info p:hover{color: #2b2b2b;}
+
 
 /***일자별스케줄 영역  ***/
 .day{
     width: 100%;
     height: 500px;
     text-align: center;
-    border: 1px solid red;
     color: #777;
     padding-top: 20px;
-    box-sizing: border-box;
-}
-
-.day p{
-    padding-top: 5px;
     box-sizing: border-box;
 }
 
@@ -656,7 +746,8 @@ font-weight: bolder;
     height: 80%;
 }
 
-table{
+
+table{     
     width: 100%;
 }
 
@@ -690,6 +781,7 @@ table td:nth-child(3){
 
 td:hover{font-weight: bolder;}
 
+
 /******************홍보문구**********************/
 
 
@@ -700,11 +792,9 @@ td:hover{font-weight: bolder;}
     box-sizing: border-box;
     color:rgb(255, 255, 255);
     background:
-    url(../images/bird1.png) no-repeat center 100px, 
-    url(../images/bird2.png) no-repeat center 50px,
     url(../images/wave111.png),
     #eee;
-
+    position: relative;
 }
 .wa_sec3 h1{
     font-size: 2em;
@@ -714,3 +804,7 @@ td:hover{font-weight: bolder;}
     padding-bottom: 20px;
     font-size: 2em;
 }
+
+.wa_sec3::before, .wa_sec3:after{clear: both; display: none; content: '';}
+.bslandmark{float:left; position: absolute; right: 10%; bottom: 0;}
+.was3_text{float:left; position: absolute; left: 50%; transform: translate(-50%);}

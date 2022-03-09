@@ -22,7 +22,7 @@ $(function(){
     });// $('.mainmenu a').each00  
 
 
-/*******************surfing point info******************/    
+// /*******************surfing point info******************/    
 
     var now_index;
     var src_off = $('.map img').attr('src');
@@ -51,22 +51,6 @@ $(function(){
     });
 
 
-/********************championship schedule****************/
-
-    var now_index;
-
-
-
-    $('sche_text h3').click(function(){
-        now_index = $(this).data('index');
-
-        $('.sche_info').hide().eq(now_index).show().hover(function(){
-            $('.day').eq(now_index).fadeIn();
-        }, function(){
-            $('.day').fadeOut();
-        });
-
-    });
 
 
 /********************main scroll****************/
